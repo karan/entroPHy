@@ -6,7 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "dotenv": "^0.4.0",
     "express": "3.5.0",
-    "jade": "*"
+    "jade": "*",
+    "request": "^2.40.0"
   }
 }
