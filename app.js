@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+require('newrelic');
 var dotenv = require('dotenv');
 var express = require('express');
 var http = require('http');
