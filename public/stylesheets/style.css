@@ -87,10 +87,11 @@ button {
   font-size: 2.1em;
 }
 
-#hitit {
-  margin: 0 50px;
-}
-
 #hit, #showonph {
   display: inline-block;
+}
+
+#loading {
+  width: 50px;
+  height: 50px;
 }

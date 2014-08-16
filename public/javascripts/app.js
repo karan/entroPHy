@@ -1,8 +1,10 @@
 function showNext() {
-  console.log("clicked");
+  $('#hitit').text('...');
   $.get('/give/-1', function(data) {
     console.log(data);
-    $("#loader").attr('src', data['redirect_url'])
+    $('#loader').load(data['url'], function(){
+      $('#hitit').text('Next');
+    });
   });
 };
 

@@ -48,7 +48,11 @@ app.get('/give/:daysAgo', function(req, res) {
       if (!error && response.statusCode == 200) {
         body = JSON.parse(body)['posts'];
         var ret = body[Math.floor(Math.random() * body.length)];
-        return res.send(200, ret);
+        request({url: ret['redirect_url'], followRedirect: false}, function (error, response, body) {
+          console.log(response.headers.location);
+          ret.url = response.headers.location;
+          return res.send(200, ret);
+        });
       }
     });
 });
