@@ -6,16 +6,23 @@ function showNext() {
   });
 
   $("#loader").load(function() {
-    $('#hitit').text('Next');
+    $('#hitit').text('Next (N)');
   });
 }
 
 function openLink() {
-  console.log("open link clicked");
   console.log($("#showonph").data('ph'));
   window.open($("#showonph").data('ph'), '_blank');
 }
 
 (function() {
   showNext();
+
+  $(document).keypress(function(e) {
+    if (e.which == 110 || e.keyCode == 110 || window.event.keyCode == 110) {
+      showNext();
+    } else if (e.which == 115 || e.keyCode == 115 || window.event.keyCode == 115) {
+      openLink();
+    }
+  });
 })();
