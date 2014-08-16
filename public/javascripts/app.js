@@ -1,14 +1,19 @@
 function showNext() {
   $('#hitit').text('...');
   $.get('/give/-1', function(data) {
-    console.log(data);
-    $('#loader').load(data['url'], function(){
-      $('#hitit').text('Next');
-    });
+    $("#loader").attr('src', data['url']);
+    $("#showonph").data('ph', data['discussion_url']);
   });
-};
 
-(function() {
+  $("#loader").load(function() {
+    $('#hitit').text('Next');
+  });
+}
 
-  
-});
+function openLink() {
+  console.log("open link clicked");
+  console.log($("#showonph").data('ph'));
+  window.open($("#showonph").data('ph'), '_blank');
+}
+
+showNext();
