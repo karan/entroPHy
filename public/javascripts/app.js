@@ -16,4 +16,6 @@ function openLink() {
   window.open($("#showonph").data('ph'), '_blank');
 }
 
-showNext();
+(function() {
+  showNext();
+})();

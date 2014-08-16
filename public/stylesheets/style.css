@@ -89,9 +89,60 @@ button {
 
 #hit, #showonph {
   display: inline-block;
+  margin-left: 30px;
 }
 
-#loading {
-  width: 50px;
-  height: 50px;
+#social {
+  min-width: 100px;
+  display: inline-block;
+  float: right;
+  margin-top: 6px;
+  margin-right: 50px;
+  height: 47px;
+}
+
+.share {
+  display: inline-block;
+  color: #FFF;
+  font-size: 32px;
+  padding-top: 10px;
+  height: 47px;
+  vertical-align: middle;
+  min-width: 60px;
+  width: 33%;
+  opacity: 1;
+  text-align: center;
+}
+
+.share:hover {
+  opacity: 0.7;
+}
+
+.sbg-facebook {
+  background: #3971B6;
+}
+
+.sbg-twitter {
+  background: #A0D6E2;
+}
+
+.sbg-github {
+  background: #333333;
+}
+
+@media only screen and (max-width : 650px) {
+  body {
+    font-size: 13pt;
+  }
+  #logo, #social, #hit, #showonph {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  button {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+  #logo {
+    display: none;
+  }
 }

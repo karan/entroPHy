@@ -3,9 +3,15 @@ extends layout
 block content
   #controls
     #logo
-    //- #days
     #hit
       button#hitit(type="button", onclick="showNext()") Next
       button#showonph(type="button", onclick="openLink()") Show on PH
+    #social
+      a(href="http://github.com/karan/entroPHy", target="_blank")
+        span.fa.fa-github.share.sbg-github
+      a(href="https://twitter.com/intent/tweet?text=entroPHy+is+so+awesome+for+hunting+on+@ProductHunt.&amp;url=http://entrophy.goel.im&amp;via=KaranGoel", target="_blank")
+        span.fa.fa-twitter.share.sbg-twitter
+      a(href="", onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;", target="_blank")
+        span.fa.fa-facebook.share.sbg-facebook
   #main
     iframe#loader(frameborder="0", style="border: 0; position:fixed; top:70px; left:0; right:0; bottom:0; width:100%; height:100%")
